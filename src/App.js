@@ -12,11 +12,14 @@ import FileManager from './pages/FileManager';
 import Order from './pages/Order';
 import Saved from './pages/Saved';
 import Settings from './pages/Settings';
+import Sidebar from './components/Sidebar';
+// import children from './components/Sidebar'
 // npm i framer-motion react-router-dom react-icons
 function App() {
   return (
     <>
       <Router>
+        <Sidebar>
         <Routes>
           <Route path='/' element={<Dashboard/>} />
           <Route path='/users' element={<Users/>} />
@@ -28,6 +31,7 @@ function App() {
           <Route path='/settings' element={<Settings/>} />
           <Route path='*' element={<>Not Found</>} />
         </Routes>
+        </Sidebar>
       </Router>
     </>
   );
